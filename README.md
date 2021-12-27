@@ -47,5 +47,5 @@ siguiente informacion:
 
 ### Manuales de Referencia
 
-- [Manual de Instalacion de Ambiente con Android Studio](https://docs.google.com/document/d/1zouJo0Mer-ImFggNW7xdBjMfRoYNBrCDVQ5uQjX1bRA/edit)
+- [Manual de Instalacion de Ambiente con Android Studio](https://docs.google.com/document/d/1RygyWeQs2-ovia-sptz7SymVXtFSNfmhOad3b-1XEtQ/edit?usp=sharing/edit)
 - [Manual de Arquitectura de Qard Wallet](https://docs.google.com/document/d/1SG2_768eVaFqCojF6YB1lUcNvjHMcDhMhVUZjY6vGpg/edit)
