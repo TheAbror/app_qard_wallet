@@ -38,8 +38,8 @@ entre los motivos tecnicos podemos destacar los siguientes:
   plataforma posible y tener una aplicacion que sea muy atractiva para el usuario con la mejor seguridad y 
   usabilidad posible.</br>
 
-Si usted es nuevo desarrallondo aplicaciones en flutter, es decir un Junior Developer le recomendamos la 
-suiguiente informacion:
+Si usted es nuevo desarrallondo aplicaciones en flutter, es decir un Junior Developer le recomendamos ver la 
+siguiente informacion:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
