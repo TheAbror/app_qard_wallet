@@ -1,7 +1,7 @@
 <h1 align="center">Proyecto Qard Wallet</h1>
 
 <h1 align="center">
-  <img src="https://github.com/Vettica/recargasweb_api_android_c/blob/develop/assets/tcs-photo.jpg" alt="Photo" width="800"/>
+  <img src="https://github.com/Ing-Brayan-Martinez/Dart-Algorithm-Example/blob/master/assest/maxresdefault.jpg" alt="Photo" width="800"/>
 </h1>
 
 [![Android CI](https://github.com/Vettica/recargasweb_api_android_c/actions/workflows/android-ci.yml/badge.svg)](https://github.com/Vettica/recargasweb_api_android_c/actions/workflows/android-ci.yml)
@@ -28,9 +28,9 @@ entre los motivos tecnicos podemos destacar los siguientes:
   a crear smell code, nosotros por ser una compañia finaciera y de mision critica no no podemos dar el lujo
   de tener errores de codigo que afecte la operacion.</br>
 
-- Dart es una tecnologia superior a Javascript, solo comparable con Typescript creada y mantenida por google
-  la cual esta en constante evolucion y cuenta como muchos recursos, principalmente proveeidos por google y
-  la comunidad.</br>
+- Dart es una tecnologia superior a Javascript, solo comparable con Typescript creada y mantenida por los 
+  desarrolladores de google, la cual esta en constante evolucion y cuenta como muchos recursos, principalmente
+  proveeidos por google y la comunidad.</br>
 
 - Flutter es un framework echo en lenguaje Dart que permite crear aplicaciones multiplataforma de manera 
   rapida y con una alta calidad grafica de manera escalable gracias a su filosofias de componentes llamadas 
@@ -38,7 +38,8 @@ entre los motivos tecnicos podemos destacar los siguientes:
   plataforma posible y tener una aplicacion que sea muy atractiva para el usuario con la mejor seguridad y 
   usabilidad posible.</br>
 
-Si usted es nuevo desarrallondo aplicaciones en flutter le recomendamos la suiguiente informacion:
+Si usted es nuevo desarrallondo aplicaciones en flutter, es decir un Junior Developer le recomendamos la 
+suiguiente informacion:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
