@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:qard_wallet/screem/home_screem.dart';
+
+import 'presentation/screem/home_screem.dart';
 
 void main() {
   runApp(const MyApp());  
