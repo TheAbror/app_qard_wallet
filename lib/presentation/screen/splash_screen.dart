@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home_screen.dart';
+
 class SplashScreen extends StatefulWidget {
   static const routeName = "/";
 
@@ -12,15 +14,32 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+  void _goToHome() {
+    Navigator.pushNamed(context, HomeScreen.routeName);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 5), _goToHome);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("splash_screem"),
-      ),
-      body: const Center(
-        child: Text("splash_screem"),
-      ),
+        body: Container(
+          color: Colors.white,
+          child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/logo.png'),
+                  const Text('Cargando...'),
+                ],
+              )
+          ),
+        )
     );
   }
 }

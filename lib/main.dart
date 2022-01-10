@@ -24,7 +24,6 @@ class QardWalletApp extends StatelessWidget {
       routes: {
         SplashScreen.routeName: (context) => const SplashScreen(),
         HomeScreen.routeName: (context) => const HomeScreen(),
-
       },
     );
   }
