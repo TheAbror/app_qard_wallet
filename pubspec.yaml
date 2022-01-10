@@ -39,6 +39,20 @@ dependencies:
   rxdart: ^0.27.3
   flutter_json_view: ^0.2.1
   dart_jsonwebtoken: ^2.4.0
+  file: ^6.1.2
+  crypto: ^3.0.1
+  uuid: ^3.0.5
+  platform: ^3.1.0
+  process: ^4.2.4
+  sqflite: ^2.0.1
+  flutter_linkify: ^5.0.2
+  introduction_screen: ^2.1.0
+  contacts_service: ^0.6.3
+  local_auth: ^1.1.9
+  fl_chart: ^0.41.0
+  share: ^2.0.4
+  sse: ^4.1.0
+  path_provider: ^2.0.8
 
 dev_dependencies:
   flutter_test:
