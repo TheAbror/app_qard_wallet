@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'presentation/screen/home_screen.dart';
-import 'presentation/screen/splash_screen.dart';
+import 'presentation/screen/home/home_screen.dart';
+import 'presentation/screen/splash/splash_screen.dart';
 
 void main() {
   runApp(const QardWalletApp());
