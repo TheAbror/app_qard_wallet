@@ -1,5 +1,5 @@
 # Change Log
-Todos los cambios notables en el proyecto serin documentados en este archivo.
+Este archivo sirve para anotar todos los cambios notables en el proyecto, segun las versiones liberadas.
 
 El formato esta basado en [Keep a Changelog](http://keepachangelog.com/) y este proyecto se adhiere a [Semantic Versioning](http://semver.org/).
 
