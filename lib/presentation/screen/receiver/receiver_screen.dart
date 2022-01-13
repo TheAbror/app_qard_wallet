@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ReceiverScreen extends StatefulWidget {
+  static const routeName = "/receiver";
+
+  const ReceiverScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _ReceiverScreenState();

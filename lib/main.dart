@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'presentation/screen/balance/balance_screen.dart';
+import 'presentation/screen/balance/wallet_screen.dart';
 import 'presentation/screen/forgot/authorization_screen.dart';
 import 'presentation/screen/forgot/biometric_authorization_screen.dart';
 import 'presentation/screen/forgot/forgot_password_screen.dart';
 import 'presentation/screen/forgot/succsess_forgot_password_screen.dart';
 import 'presentation/screen/home/home_screen.dart';
+import 'presentation/screen/pay/confirm_pay_screen.dart';
+import 'presentation/screen/pay/pay_screen.dart';
+import 'presentation/screen/receiver/receiver_screen.dart';
 import 'presentation/screen/recover/recover_account_screen.dart';
+import 'presentation/screen/send/send_screen.dart';
+import 'presentation/screen/send/success_send_screen.dart';
 import 'presentation/screen/signin/signin_screen.dart';
 import 'presentation/screen/signin/twofa_authorization_screen.dart';
 import 'presentation/screen/signout/confirmate_signout_screen.dart';
@@ -56,7 +63,19 @@ class QardWalletApp extends StatelessWidget {
         RecoverAccountScreen.routeName: (context) => const RecoverAccountScreen(),
         //home
         HomeScreen.routeName: (context) => const HomeScreen(),
-
+        //pay
+        PayScreen.routeName: (context) => const PayScreen(),
+        ConfirmPayScreen.routeName: (context) => const ConfirmPayScreen(),
+        //balance
+        BalanceScreen.routeName: (context) => const BalanceScreen(),
+        WalletScreen.routeName: (context) => const WalletScreen(),
+        //send
+        SendScreen.routeName: (context) => const SendScreen(),
+        SuccessSendScreen.routeName: (context) => const SuccessSendScreen(),
+        //receive
+        ReceiverScreen.routeName: (context) => const ReceiverScreen(),
+        //exchange
+        HomeScreen.routeName: (context) => const HomeScreen(),
       },
     );
   }

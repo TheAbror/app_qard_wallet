@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SuccessSendScreen extends StatefulWidget {
+  static const routeName = "/send/success";
+
+  const SuccessSendScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _SuccessSendScreenState();

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class PayScreen extends StatefulWidget {
+  static const routeName = "/pay";
+
+  const PayScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _PayScreenState();

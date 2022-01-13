@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class BalanceScreen extends StatefulWidget {
+  static const routeName = "/balance";
+
+  const BalanceScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _BalanceScreenState();
