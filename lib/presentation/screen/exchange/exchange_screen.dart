@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ExchangeScreen extends StatefulWidget {
+  static const routeName = "/exchange";
+
+  const ExchangeScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _ExchangeScreenState();
