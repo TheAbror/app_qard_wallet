@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
-class BalanceScreen extends StatefulWidget {
+class SuccessSendScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _BalanceScreenState();
+    return _SuccessSendScreenState();
   }
 }
 
-class _BalanceScreenState extends State<BalanceScreen> {
+class _SuccessSendScreenState extends State<SuccessSendScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("balance_screen"),
+        title: Text("success_send_screen"),
       ),
       body: Center(
-        child: Text("balance_screen"),
+        child: Text("success_send_screen"),
       ),
     );
   }
