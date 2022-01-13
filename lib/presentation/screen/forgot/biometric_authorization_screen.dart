@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class BiometricAuthorizationScreen extends StatefulWidget {
+  static const routeName = "/forgot_password/auth/biometric";
+
+  const BiometricAuthorizationScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _BiometricAuthorizationScreenState();

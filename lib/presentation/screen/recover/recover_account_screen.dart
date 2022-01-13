@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class RecoverAccountScreen extends StatefulWidget {
+  static const routeName = "/recover";
+
+  const RecoverAccountScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _RecoverAccountScreenState();

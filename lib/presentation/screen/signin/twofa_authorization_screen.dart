@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class TwofaAuthorizationScreen extends StatefulWidget {
+  static const routeName = "/signin/2fa";
+
+  const TwofaAuthorizationScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _TwofaAuthorizationScreenState();

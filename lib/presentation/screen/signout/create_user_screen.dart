@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CreateUserScreen extends StatefulWidget {
+  static const routeName = "/signout/user";
+
+  const CreateUserScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _CreateUserScreenState();

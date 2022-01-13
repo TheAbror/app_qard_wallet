@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SelectActionScreen extends StatefulWidget {
+  static const routeName = "/action";
+
+  const SelectActionScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _SelectActionScreenState();

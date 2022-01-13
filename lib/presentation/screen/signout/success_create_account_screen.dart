@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SuccessCreateAccountScreen extends StatefulWidget {
+  static const routeName = "/signout/success";
+
+  const SuccessCreateAccountScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _SuccessCreateAccountScreenState();
@@ -9,6 +13,7 @@ class SuccessCreateAccountScreen extends StatefulWidget {
 
 class _SuccessCreateAccountScreenState
     extends State<SuccessCreateAccountScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

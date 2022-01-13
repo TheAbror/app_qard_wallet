@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
+  static const routeName = "/forgot_password/new";
+
+  const ForgotPasswordScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _ForgotPasswordScreenState();

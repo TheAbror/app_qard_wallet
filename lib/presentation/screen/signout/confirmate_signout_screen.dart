@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 
-class ConfirmateLoginScreen extends StatefulWidget {
+class ConfirmateSignOutScreen extends StatefulWidget {
+  static const routeName = "/signout/confirmate";
+
+  const ConfirmateSignOutScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
-    return _ConfirmateLoginScreenState();
+    return _ConfirmateSignOutScreenState();
   }
 }
 
-class _ConfirmateLoginScreenState extends State<ConfirmateLoginScreen> {
+class _ConfirmateSignOutScreenState extends State<ConfirmateSignOutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

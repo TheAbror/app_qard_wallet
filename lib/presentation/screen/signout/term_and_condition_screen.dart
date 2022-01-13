@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class TermAndConditionScreen extends StatefulWidget {
+  static const routeName = "/signout/term_and_condition";
+
+  const TermAndConditionScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _TermAndConditionScreenState();

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class AuthorizationScreen extends StatefulWidget {
+  static const routeName = "/forgot_password/auth";
+
+  const AuthorizationScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _AuthorizationScreenState();
