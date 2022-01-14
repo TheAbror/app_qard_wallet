@@ -54,7 +54,7 @@ class _ConfirmateSignOutScreenState extends State<ConfirmateSignOutScreen> {
                     style: Theme.of(context).textTheme.headline1,
                   ),
                   const SizedBox(
-                    height: 80,
+                    height: 40,
                   ),
                   TextFormField(
                     obscureText: false,

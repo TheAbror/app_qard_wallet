@@ -57,7 +57,7 @@ class QardWalletApp extends StatelessWidget {
               ),
               textTheme: const TextTheme(
                   headline1: TextStyle(color: Color(0xff353741),
-                    fontSize: 30, fontFamily: 'GothamRounded', ),
+                    fontSize: 36, fontFamily: 'GothamRounded', ),
                   headline2: TextStyle(color: Colors.black,
                     fontSize: 25 ),
                   bodyText1: TextStyle(fontSize: 15, fontWeight: FontWeight.bold ),

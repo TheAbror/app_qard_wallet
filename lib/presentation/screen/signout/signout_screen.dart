@@ -55,7 +55,7 @@ class _SignOutScreenState extends State<SignOutScreen> {
                   style: Theme.of(context).textTheme.headline1,
                 ),
                 const SizedBox(
-                  height: 80,
+                  height: 40,
                 ),
                 TextFormField(
                   obscureText: false,
