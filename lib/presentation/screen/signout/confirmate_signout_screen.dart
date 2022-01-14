@@ -134,7 +134,7 @@ class _ConfirmateSignOutScreenState extends State<ConfirmateSignOutScreen> {
                   ElevatedButton(
                     onPressed: () => Navigator.pop(context),
                     child: Text(
-                      'Exit',
+                      'Back',
                       style: Theme.of(context).textTheme.headline2,
                     ),
                     style: ElevatedButton.styleFrom(

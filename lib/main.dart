@@ -58,9 +58,10 @@ class QardWalletApp extends StatelessWidget {
               textTheme: const TextTheme(
                   headline1: TextStyle(color: Color(0xff353741),
                     fontSize: 36, fontFamily: 'GothamRounded', ),
-                  headline2: TextStyle(color: Colors.black,
-                    fontSize: 25 ),
-                  bodyText1: TextStyle(fontSize: 15, fontWeight: FontWeight.bold ),
+                  headline2: TextStyle(color: Color(0xff353741),
+                      fontSize: 25, fontFamily: 'GothamRounded'),
+                  bodyText1: TextStyle(fontSize: 15,
+                      fontWeight: FontWeight.bold ),
                   bodyText2: TextStyle(color: Colors.black)
               ),
             ),
@@ -77,11 +78,11 @@ class QardWalletApp extends StatelessWidget {
               ),
               textTheme: const TextTheme(
                   headline1: TextStyle(color: Colors.white,
-                    fontSize: 30, fontFamily: 'GothamRounded', ),
+                    fontSize: 36, fontFamily: 'GothamRounded', ),
                   headline2: TextStyle(color: Colors.white,
-                      fontSize: 25 ),
-                  bodyText1: TextStyle(color: Colors.white,
-                      fontSize: 20 ),
+                      fontSize: 25, fontFamily: 'GothamRounded'),
+                  bodyText1: TextStyle(fontSize: 15,
+                      fontWeight: FontWeight.bold),
                   bodyText2: TextStyle(color: Colors.white)
               ),
             ),
