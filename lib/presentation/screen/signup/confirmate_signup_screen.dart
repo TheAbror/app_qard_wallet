@@ -1,19 +1,20 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:qard_wallet/main.dart';
+import 'package:qard_wallet/presentation/screen/signup/create_password_screen.dart';
+import 'package:qard_wallet/presentation/screen/signup/modify_signup_screen.dart';
 
-class ConfirmateSignOutScreen extends StatefulWidget {
-  static const routeName = "/signout/confirmate";
+class ConfirmateSignUpScreen extends StatefulWidget {
+  static const routeName = "/signup/confirmate";
 
-  const ConfirmateSignOutScreen({Key? key}) : super(key: key);
+  const ConfirmateSignUpScreen({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _ConfirmateSignOutScreenState();
+    return _ConfirmateSignUpScreenState();
   }
 }
 
-class _ConfirmateSignOutScreenState extends State<ConfirmateSignOutScreen> {
+class _ConfirmateSignUpScreenState extends State<ConfirmateSignUpScreen> {
 
   late GlobalKey<FormState> _formKey;
 
@@ -51,7 +52,7 @@ class _ConfirmateSignOutScreenState extends State<ConfirmateSignOutScreen> {
                   const SizedBox(
                     height: 80,
                   ),
-                  Text("Confirmate Login",
+                  Text("Confirmate SignUp",
                     style: Theme.of(context).textTheme.headline1,
                   ),
                   const SizedBox(
@@ -63,7 +64,7 @@ class _ConfirmateSignOutScreenState extends State<ConfirmateSignOutScreen> {
                       Row(
                         children: const [
                           Text(
-                            'Confirm Phone Number',
+                            'You Phone Number: +584128811350',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -93,8 +94,9 @@ class _ConfirmateSignOutScreenState extends State<ConfirmateSignOutScreen> {
                               width: 1.7,
                             ),
                           ),
-                          labelText: 'Code',
+                          labelText: 'Confirm Phone Number',
                           labelStyle: Theme.of(context).textTheme.bodyText1,
+                          hintText: 'Write your code'
                         ),
                       ),
                       Row(
@@ -119,7 +121,7 @@ class _ConfirmateSignOutScreenState extends State<ConfirmateSignOutScreen> {
                       Row(
                         children: const [
                           Text(
-                            'Confirm Email',
+                            'You Email: brayanmartinez827@gmail.com',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -149,8 +151,9 @@ class _ConfirmateSignOutScreenState extends State<ConfirmateSignOutScreen> {
                               width: 1.7,
                             ),
                           ),
-                          labelText: 'Code',
+                          labelText: 'Confirm Email',
                           labelStyle: Theme.of(context).textTheme.bodyText1,
+                          hintText:  'Write your code'
                         ),
                       ),
                       Row(
@@ -161,7 +164,7 @@ class _ConfirmateSignOutScreenState extends State<ConfirmateSignOutScreen> {
                             child: const Text('60',),
                           ),
                           FlatButton(
-                            onPressed: () => print('hhh'), child: Text('Send Code'),)
+                            onPressed: () => print('hhh'), child: const Text('Send Code'),)
                         ],
                       )
                     ],
@@ -170,9 +173,24 @@ class _ConfirmateSignOutScreenState extends State<ConfirmateSignOutScreen> {
                     height: 30,
                   ),
                   ElevatedButton(
-                    onPressed: () => Navigator.pushNamed(context, ConfirmateSignOutScreen.routeName),
+                    onPressed: () => Navigator.pushNamed(context, CreatePasswordScreen.routeName),
                     child: Text(
-                      'Next',
+                      'Confirm',
+                      style: Theme.of(context).textTheme.headline2,
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      elevation: 1,
+                      primary: Theme.of(context).colorScheme.primary,
+                      minimumSize: const Size.fromHeight(50),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  ElevatedButton(
+                    onPressed: () => Navigator.pushNamed(context, ModifySignUpScreen.routeName),
+                    child: Text(
+                      'Modify',
                       style: Theme.of(context).textTheme.headline2,
                     ),
                     style: ElevatedButton.styleFrom(
@@ -187,14 +205,13 @@ class _ConfirmateSignOutScreenState extends State<ConfirmateSignOutScreen> {
                   ElevatedButton(
                     onPressed: () => Navigator.pop(context),
                     child: Text(
-                      'Back',
+                      'Exit',
                       style: Theme.of(context).textTheme.headline2,
                     ),
                     style: ElevatedButton.styleFrom(
                       elevation: 1,
                       primary: Theme.of(context).colorScheme.primary,
                       minimumSize: const Size.fromHeight(50),
-                      //padding: const EdgeInsets.all(20),
                     ),
                   ),
                 ],

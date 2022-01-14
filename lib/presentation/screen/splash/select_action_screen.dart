@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:qard_wallet/main.dart';
 import 'package:qard_wallet/presentation/screen/recover/recover_account_screen.dart';
-import 'package:qard_wallet/presentation/screen/signout/signout_screen.dart';
+import 'package:qard_wallet/presentation/screen/signup/signup_screen.dart';
 
 class SelectActionScreen extends StatefulWidget {
   static const routeName = "/action";
@@ -38,7 +38,7 @@ class _SelectActionScreenState extends State<SelectActionScreen> {
                 height: 80,
               ),
               ElevatedButton(
-                onPressed: () => Navigator.pushNamed(context, SignOutScreen.routeName),
+                onPressed: () => Navigator.pushNamed(context, SignUpScreen.routeName),
                 child: Text(
                   'Create Account',
                   style: Theme.of(context).textTheme.headline2,

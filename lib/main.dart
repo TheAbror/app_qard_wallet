@@ -17,11 +17,12 @@ import 'presentation/screen/send/send_screen.dart';
 import 'presentation/screen/send/success_send_screen.dart';
 import 'presentation/screen/signin/signin_screen.dart';
 import 'presentation/screen/signin/twofa_authorization_screen.dart';
-import 'presentation/screen/signout/confirmate_signout_screen.dart';
-import 'presentation/screen/signout/create_user_screen.dart';
-import 'presentation/screen/signout/signout_screen.dart';
-import 'presentation/screen/signout/success_create_account_screen.dart';
-import 'presentation/screen/signout/term_and_condition_screen.dart';
+import 'presentation/screen/signup/confirmate_signup_screen.dart';
+import 'presentation/screen/signup/create_password_screen.dart';
+import 'presentation/screen/signup/modify_signup_screen.dart';
+import 'presentation/screen/signup/signup_screen.dart';
+import 'presentation/screen/signup/success_create_account_screen.dart';
+import 'presentation/screen/signup/term_and_condition_screen.dart';
 import 'presentation/screen/splash/select_action_screen.dart';
 import 'presentation/screen/splash/splash_screen.dart';
 
@@ -91,10 +92,11 @@ class QardWalletApp extends StatelessWidget {
               //splash
               SplashScreen.routeName: (context) => const SplashScreen(),
               SelectActionScreen.routeName: (context) => const SelectActionScreen(),
-              //signout
-              SignOutScreen.routeName: (context) => const SignOutScreen(),
-              ConfirmateSignOutScreen.routeName: (context) => const ConfirmateSignOutScreen(),
-              CreateUserScreen.routeName: (context) => const CreateUserScreen(),
+              //signup
+              SignUpScreen.routeName: (context) => const SignUpScreen(),
+              ConfirmateSignUpScreen.routeName: (context) => const ConfirmateSignUpScreen(),
+              ModifySignUpScreen.routeName: (context) => const ModifySignUpScreen(),
+              CreatePasswordScreen.routeName: (context) => const CreatePasswordScreen(),
               TermAndConditionScreen.routeName: (context) => const TermAndConditionScreen(),
               SuccessCreateAccountScreen.routeName: (context) => const SuccessCreateAccountScreen(),
               //signin
