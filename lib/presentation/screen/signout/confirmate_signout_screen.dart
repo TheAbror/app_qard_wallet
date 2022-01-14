@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:qard_wallet/main.dart';
 
@@ -56,62 +57,114 @@ class _ConfirmateSignOutScreenState extends State<ConfirmateSignOutScreen> {
                   const SizedBox(
                     height: 40,
                   ),
-                  TextFormField(
-                    obscureText: false,
-                    validator: _onValidate,
-                    onSaved: (value) => _phoneNumber = value,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.primary,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            'Confirm Phone Number',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      TextFormField(
+                        obscureText: false,
+                        validator: _onValidate,
+                        onSaved: (value) => _phoneNumber = value,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Theme.of(context).colorScheme.primary,
+                              width: 1.7,
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Theme.of(context).colorScheme.secondary,
+                              width: 1.7,
+                            ),
+                          ),
+                          labelText: 'Code',
+                          labelStyle: Theme.of(context).textTheme.bodyText1,
                         ),
                       ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.primary,
-                          width: 1.7,
-                        ),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.secondary,
-                          width: 1.7,
-                        ),
-                      ),
-                      helperText: 'Just For Demo.',
-                      labelText: 'Phone Number',
-                      labelStyle: Theme.of(context).textTheme.bodyText1,
-                    ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(left: 5),
+                            child: const Text('60',),
+                          ),
+                          FlatButton(
+                            onPressed: () => print('hhh'), child: Text('Send Code'),)
+                        ],
+                      )
+                    ],
                   ),
                   const SizedBox(
                     height: 30,
                   ),
-                  TextFormField(
-                    obscureText: false,
-                    validator: _onValidate,
-                    onSaved: (value) => _phoneNumber = value,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.primary,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            'Confirm Email',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      TextFormField(
+                        obscureText: false,
+                        validator: _onValidate,
+                        onSaved: (value) => _phoneNumber = value,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Theme.of(context).colorScheme.primary,
+                              width: 1.7,
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Theme.of(context).colorScheme.secondary,
+                              width: 1.7,
+                            ),
+                          ),
+                          labelText: 'Code',
+                          labelStyle: Theme.of(context).textTheme.bodyText1,
                         ),
                       ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.primary,
-                          width: 1.7,
-                        ),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.secondary,
-                          width: 1.7,
-                        ),
-                      ),
-                      helperText: 'Just For Demo.',
-                      labelText: 'Email',
-                      labelStyle: Theme.of(context).textTheme.bodyText1,
-                    ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(left: 5),
+                            child: const Text('60',),
+                          ),
+                          FlatButton(
+                            onPressed: () => print('hhh'), child: Text('Send Code'),)
+                        ],
+                      )
+                    ],
                   ),
                   const SizedBox(
                     height: 30,
