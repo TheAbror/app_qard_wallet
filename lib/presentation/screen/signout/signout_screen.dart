@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qard_wallet/main.dart';
 
 class SignOutScreen extends StatefulWidget {
   static const routeName = "/signout";
@@ -12,14 +13,120 @@ class SignOutScreen extends StatefulWidget {
 }
 
 class _SignOutScreenState extends State<SignOutScreen> {
+
+  late GlobalKey<FormState> _formKey;
+
+  late String? _phoneNumber;
+  late String? _email;
+
+  String? _onValidate(String? value) {
+
+  }
+
+  void _onSave() {
+
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _formKey = GlobalKey<FormState>();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("signout_screem"),
+      backgroundColor: Theme.of(context).colorScheme.background,
+      body:  SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.only(left: 20, right: 20),
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          color: Theme.of(context).colorScheme.primaryVariant,
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 80,
+              ),
+              Text("Create Login",
+                style: Theme.of(context).textTheme.headline1,
+              ),
+              const SizedBox(
+                height: 80,
+              ),
+              TextFormField(
+                obscureText: false,
+                validator: _onValidate,
+                onSaved: (value) => _phoneNumber = value,
+                decoration: InputDecoration(
+                  labelText: 'Phone Number',
+                  labelStyle: Theme.of(context).textTheme.bodyText1,
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Theme.of(context).colorScheme.secondary),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              TextFormField(
+                obscureText: false,
+                validator: _onValidate,
+                onSaved: (value) => _phoneNumber = value,
+                decoration: InputDecoration(
+                  labelText: 'Email',
+                  labelStyle: Theme.of(context).textTheme.bodyText1,
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Theme.of(context).colorScheme.secondary),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              ElevatedButton(
+                onPressed: () => null,
+                child: Text(
+                  'Next',
+                  style: Theme.of(context).textTheme.headline2,
+                ),
+                style: ElevatedButton.styleFrom(
+                  elevation: 1,
+                  primary: Theme.of(context).colorScheme.primary,
+                  minimumSize: const Size.fromHeight(50),
+                  //padding: const EdgeInsets.all(20),
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              ElevatedButton(
+                onPressed: () => Navigator.pop(context),
+                child: Text(
+                  'Exit',
+                  style: Theme.of(context).textTheme.headline2,
+                ),
+                style: ElevatedButton.styleFrom(
+                  elevation: 1,
+                  primary: Theme.of(context).colorScheme.primary,
+                  minimumSize: const Size.fromHeight(50),
+                  //padding: const EdgeInsets.all(20),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
-      body: const Center(
-        child: Text("signout_screem"),
+      floatingActionButton: FloatingActionButton(
+          child: Icon(QardWalletApp.themeNotifier.value == ThemeMode.light
+              ? Icons.dark_mode
+              : Icons.light_mode),
+          onPressed: () {
+            QardWalletApp.themeNotifier.value =
+            QardWalletApp.themeNotifier.value == ThemeMode.light
+                ? ThemeMode.dark
+                : ThemeMode.light;
+          }
       ),
     );
   }

@@ -25,8 +25,7 @@ class _SelectActionScreenState extends State<SelectActionScreen> {
           padding: const EdgeInsets.only(left: 20, right: 20),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          //height: 900,
-          color: Theme.of(context).colorScheme.background,
+          color: Theme.of(context).colorScheme.primaryVariant,
           child: Column(
             children: [
               const SizedBox(
