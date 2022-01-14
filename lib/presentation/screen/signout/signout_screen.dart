@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qard_wallet/main.dart';
+import 'package:qard_wallet/presentation/screen/signout/confirmate_signout_screen.dart';
 
 class SignOutScreen extends StatefulWidget {
   static const routeName = "/signout";
@@ -43,78 +44,111 @@ class _SignOutScreenState extends State<SignOutScreen> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           color: Theme.of(context).colorScheme.primaryVariant,
-          child: Column(
-            children: [
-              const SizedBox(
-                height: 80,
-              ),
-              Text("Create Login",
-                style: Theme.of(context).textTheme.headline1,
-              ),
-              const SizedBox(
-                height: 80,
-              ),
-              TextFormField(
-                obscureText: false,
-                validator: _onValidate,
-                onSaved: (value) => _phoneNumber = value,
-                decoration: InputDecoration(
-                  labelText: 'Phone Number',
-                  labelStyle: Theme.of(context).textTheme.bodyText1,
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Theme.of(context).colorScheme.secondary),
+          child: Form(
+            key: _formKey,
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 80,
+                ),
+                Text("Create Login",
+                  style: Theme.of(context).textTheme.headline1,
+                ),
+                const SizedBox(
+                  height: 80,
+                ),
+                TextFormField(
+                  obscureText: false,
+                  validator: _onValidate,
+                  onSaved: (value) => _phoneNumber = value,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Theme.of(context).colorScheme.primary,
+                        width: 1.7,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Theme.of(context).colorScheme.secondary,
+                        width: 1.7,
+                      ),
+                    ),
+                    helperText: 'Just For Demo.',
+                    labelText: 'Phone Number',
+                    labelStyle: Theme.of(context).textTheme.bodyText1,
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              TextFormField(
-                obscureText: false,
-                validator: _onValidate,
-                onSaved: (value) => _phoneNumber = value,
-                decoration: InputDecoration(
-                  labelText: 'Email',
-                  labelStyle: Theme.of(context).textTheme.bodyText1,
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Theme.of(context).colorScheme.secondary),
+                const SizedBox(
+                  height: 30,
+                ),
+                TextFormField(
+                  obscureText: false,
+                  validator: _onValidate,
+                  onSaved: (value) => _phoneNumber = value,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Theme.of(context).colorScheme.primary,
+                        width: 1.7,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Theme.of(context).colorScheme.secondary,
+                        width: 1.7,
+                      ),
+                    ),
+                    helperText: 'Just For Demo.',
+                    labelText: 'Email',
+                    labelStyle: Theme.of(context).textTheme.bodyText1,
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              ElevatedButton(
-                onPressed: () => null,
-                child: Text(
-                  'Next',
-                  style: Theme.of(context).textTheme.headline2,
+                const SizedBox(
+                  height: 30,
                 ),
-                style: ElevatedButton.styleFrom(
-                  elevation: 1,
-                  primary: Theme.of(context).colorScheme.primary,
-                  minimumSize: const Size.fromHeight(50),
-                  //padding: const EdgeInsets.all(20),
+                ElevatedButton(
+                  onPressed: () => Navigator.pushNamed(context, ConfirmateSignOutScreen.routeName),
+                  child: Text(
+                    'Next',
+                    style: Theme.of(context).textTheme.headline2,
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    elevation: 1,
+                    primary: Theme.of(context).colorScheme.primary,
+                    minimumSize: const Size.fromHeight(50),
+                    //padding: const EdgeInsets.all(20),
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              ElevatedButton(
-                onPressed: () => Navigator.pop(context),
-                child: Text(
-                  'Exit',
-                  style: Theme.of(context).textTheme.headline2,
+                const SizedBox(
+                  height: 30,
                 ),
-                style: ElevatedButton.styleFrom(
-                  elevation: 1,
-                  primary: Theme.of(context).colorScheme.primary,
-                  minimumSize: const Size.fromHeight(50),
-                  //padding: const EdgeInsets.all(20),
+                ElevatedButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: Text(
+                    'Exit',
+                    style: Theme.of(context).textTheme.headline2,
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    elevation: 1,
+                    primary: Theme.of(context).colorScheme.primary,
+                    minimumSize: const Size.fromHeight(50),
+                    //padding: const EdgeInsets.all(20),
+                  ),
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+          )
         ),
       ),
       floatingActionButton: FloatingActionButton(

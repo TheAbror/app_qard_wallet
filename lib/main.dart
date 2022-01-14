@@ -60,8 +60,7 @@ class QardWalletApp extends StatelessWidget {
                     fontSize: 30, fontFamily: 'GothamRounded', ),
                   headline2: TextStyle(color: Colors.black,
                     fontSize: 25 ),
-                  bodyText1: TextStyle(color: Colors.black,
-                      fontSize: 20 ),
+                  bodyText1: TextStyle(fontSize: 15, fontWeight: FontWeight.bold ),
                   bodyText2: TextStyle(color: Colors.black)
               ),
             ),
