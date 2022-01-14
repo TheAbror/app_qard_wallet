@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qard_wallet/domain/enums/init_type.dart';
 import 'package:qard_wallet/presentation/bloc/splash_bloc.dart';
-import 'package:qard_wallet/presentation/screen/home/home_screen.dart';
+import 'package:qard_wallet/presentation/screen/splash/select_action_screen.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
     InitType result = InitType.intro;
 
     if (result ==  InitType.intro) {
-      Navigator.pushNamed(context, HomeScreen.routeName);
+      Navigator.pushNamed(context, SelectActionScreen.routeName);
 
     }
 

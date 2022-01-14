@@ -32,7 +32,7 @@ void main() {
 class QardWalletApp extends StatelessWidget {
 
   static final ValueNotifier<ThemeMode> themeNotifier =
-    ValueNotifier(ThemeMode.light);
+    ValueNotifier(ThemeMode.system);
 
   const QardWalletApp({Key? key}) : super(key: key);
 
@@ -49,16 +49,18 @@ class QardWalletApp extends StatelessWidget {
                   elevation: 1.5
               ),
               colorScheme: const ColorScheme.light(
-                primary: Colors.amberAccent,
+                primary: Color(0xff00D0C4),
                 primaryVariant: Colors.white,
-                secondary: Color(0xff00D0C4),
+                secondary: Colors.amberAccent,
                 background: Color(0xfff2f2f2),
                 brightness: Brightness.light,
               ),
               textTheme: const TextTheme(
-                  headline1: TextStyle(color: Colors.black,
-                    fontSize: 18, fontFamily: 'GothamRounded', ),
-                  headline4: TextStyle(color: Colors.black),
+                  headline1: TextStyle(color: Color(0xff353741),
+                    fontSize: 30, fontFamily: 'GothamRounded', ),
+                  headline2: TextStyle(color: Colors.black,
+                    fontSize: 25 ),
+                  bodyText1: TextStyle(color: Colors.black),
                   bodyText2: TextStyle(color: Colors.black)
               ),
             ),
@@ -75,7 +77,9 @@ class QardWalletApp extends StatelessWidget {
               ),
               textTheme: const TextTheme(
                   headline1: TextStyle(color: Colors.white,
-                    fontSize: 18, fontFamily: 'GothamRounded', ),
+                    fontSize: 30, fontFamily: 'GothamRounded', ),
+                  headline2: TextStyle(color: Colors.white,
+                      fontSize: 25 ),
                   headline4: TextStyle(color: Colors.white),
                   bodyText2: TextStyle(color: Colors.white)
               ),
