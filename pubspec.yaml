@@ -98,7 +98,7 @@ flutter:
 
     - family: Roboto
       fonts:
-        - asset: assets/fonts/Roboto/Roboto-Bold.ttf
+        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
 
   # fonts:
   #   - family: Schyler
