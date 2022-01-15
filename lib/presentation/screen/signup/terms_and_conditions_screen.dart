@@ -24,7 +24,7 @@ class _TermsAndConditionsScreenState extends State<TermsAndConditionsScreen> {
         child: Container(
           padding: const EdgeInsets.only(left: 20, right: 20),
           width: MediaQuery.of(context).size.width,
-          height: 1000,
+          height: 843,
           color: Theme.of(context).colorScheme.primaryVariant,
           child: Column(
             children: [
@@ -40,19 +40,19 @@ class _TermsAndConditionsScreenState extends State<TermsAndConditionsScreen> {
               ),
               Image.asset('assets/images/terms-and-conditions.png'),
               const SizedBox(
-                height: 60,
+                height: 40,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
                     'Read our ',
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 16),
                   ),
                   Link(
                     child: Text(
                       'Privacy Policy.',
-                      style: TextStyle(fontSize: 20,
+                      style: TextStyle(fontSize: 16,
                         color: Theme.of(context).colorScheme.secondary
                       ),
                     ),
@@ -61,7 +61,7 @@ class _TermsAndConditionsScreenState extends State<TermsAndConditionsScreen> {
                   ),
                   const Text(
                     ' Tap "Agree and continue" ',
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 16),
                   ),
                 ],
               ),
@@ -70,12 +70,12 @@ class _TermsAndConditionsScreenState extends State<TermsAndConditionsScreen> {
                 children: [
                   const Text(
                     'to accept the ',
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 16),
                   ),
                   Link(
                     child: Text(
                       'Terms of Service.',
-                        style: TextStyle(fontSize: 20,
+                        style: TextStyle(fontSize: 16,
                         color: Theme.of(context).colorScheme.secondary
                       ),
                     ),
@@ -85,7 +85,7 @@ class _TermsAndConditionsScreenState extends State<TermsAndConditionsScreen> {
                 ],
               ),
               const SizedBox(
-                height: 90,
+                height: 26,
               ),
               ElevatedButton(
                 onPressed: () => Navigator.pushNamed(context, HomeScreen.routeName),
@@ -101,7 +101,7 @@ class _TermsAndConditionsScreenState extends State<TermsAndConditionsScreen> {
                 ),
               ),
               const SizedBox(
-                height: 140,
+                height: 33,
               ),
               Image.asset('assets/images/logo.png',height: 150,),
             ],

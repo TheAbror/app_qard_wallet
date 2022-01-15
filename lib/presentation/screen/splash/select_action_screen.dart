@@ -16,6 +16,7 @@ class SelectActionScreen extends StatefulWidget {
 }
 
 class _SelectActionScreenState extends State<SelectActionScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +25,7 @@ class _SelectActionScreenState extends State<SelectActionScreen> {
         child: Container(
           padding: const EdgeInsets.only(left: 20, right: 20),
           width: MediaQuery.of(context).size.width,
-          height: 820,
+          height: 843,
           color: Theme.of(context).colorScheme.primaryVariant,
           child: Column(
             children: [

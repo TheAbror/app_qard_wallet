@@ -42,7 +42,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
         child: Container(
             padding: const EdgeInsets.only(left: 20, right: 20),
             width: MediaQuery.of(context).size.width,
-            height: 820,
+            height: 843,
             color: Theme.of(context).colorScheme.primaryVariant,
             child: Form(
               key: _formKey,
