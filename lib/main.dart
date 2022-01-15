@@ -22,7 +22,7 @@ import 'presentation/screen/signup/create_password_screen.dart';
 import 'presentation/screen/signup/modify_signup_screen.dart';
 import 'presentation/screen/signup/signup_screen.dart';
 import 'presentation/screen/signup/success_create_account_screen.dart';
-import 'presentation/screen/signup/term_and_condition_screen.dart';
+import 'presentation/screen/signup/terms_and_conditions_screen.dart';
 import 'presentation/screen/splash/select_action_screen.dart';
 import 'presentation/screen/splash/splash_screen.dart';
 
@@ -97,7 +97,7 @@ class QardWalletApp extends StatelessWidget {
               ConfirmateSignUpScreen.routeName: (context) => const ConfirmateSignUpScreen(),
               ModifySignUpScreen.routeName: (context) => const ModifySignUpScreen(),
               CreatePasswordScreen.routeName: (context) => const CreatePasswordScreen(),
-              TermAndConditionScreen.routeName: (context) => const TermAndConditionScreen(),
+              TermsAndConditionsScreen.routeName: (context) => const TermsAndConditionsScreen(),
               SuccessCreateAccountScreen.routeName: (context) => const SuccessCreateAccountScreen(),
               //signin
               SignInScreen.routeName: (context) => const SignInScreen(),

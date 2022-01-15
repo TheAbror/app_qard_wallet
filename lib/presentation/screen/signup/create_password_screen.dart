@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qard_wallet/main.dart';
-import 'package:qard_wallet/presentation/screen/signup/term_and_condition_screen.dart';
+import 'package:qard_wallet/presentation/screen/signup/terms_and_conditions_screen.dart';
 
 class CreatePasswordScreen extends StatefulWidget {
   static const routeName = "/signup/password";
@@ -14,6 +14,7 @@ class CreatePasswordScreen extends StatefulWidget {
 }
 
 class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
+
   late GlobalKey<FormState> _formKey;
 
   late String? _phoneNumber;
@@ -41,7 +42,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
         child: Container(
             padding: const EdgeInsets.only(left: 20, right: 20),
             width: MediaQuery.of(context).size.width,
-            height: 1000,
+            height: 820,
             color: Theme.of(context).colorScheme.primaryVariant,
             child: Form(
               key: _formKey,
@@ -119,7 +120,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                     height: 30,
                   ),
                   ElevatedButton(
-                    onPressed: () => Navigator.pushNamed(context, TermAndConditionScreen.routeName),
+                    onPressed: () => Navigator.pushNamed(context, TermsAndConditionsScreen.routeName),
                     child: Text(
                       'Save',
                       style: Theme.of(context).textTheme.headline2,
