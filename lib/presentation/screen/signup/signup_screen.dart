@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:qard_wallet/main.dart';
 import 'package:qard_wallet/presentation/screen/signup/confirmate_signup_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -64,12 +63,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Theme.of(context).colorScheme.primary,
+                        color: Theme.of(context).colorScheme.secondaryVariant,
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Theme.of(context).colorScheme.primary,
+                        color: Theme.of(context).colorScheme.secondaryVariant,
                         width: 1.7,
                       ),
                     ),
@@ -82,7 +81,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     labelText: 'First Name',
                     labelStyle: Theme.of(context).textTheme.bodyText1,
                     hintText: 'Write your first name',
-                    helperText: 'This information must be real, because it will be confirmed'
                   ),
                 ),
                 const SizedBox(
@@ -95,12 +93,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.primary,
+                          color: Theme.of(context).colorScheme.secondaryVariant,
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.primary,
+                          color: Theme.of(context).colorScheme.secondaryVariant,
                           width: 1.7,
                         ),
                       ),
@@ -113,7 +111,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       labelText: 'Last Name',
                       labelStyle: Theme.of(context).textTheme.bodyText1,
                       hintText: 'Write your last name',
-                      helperText: 'This information must be real, because it will be confirmed'
                   ),
                 ),
                 const SizedBox(
@@ -126,12 +123,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.primary,
+                          color: Theme.of(context).colorScheme.secondaryVariant,
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.primary,
+                          color: Theme.of(context).colorScheme.secondaryVariant,
                           width: 1.7,
                         ),
                       ),
@@ -144,7 +141,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       labelText: 'Alias',
                       labelStyle: Theme.of(context).textTheme.bodyText1,
                       hintText: 'Write your alias',
-                      helperText: 'You can only use - _ to create the alias, this is for your security'
                   ),
                 ),
                 const SizedBox(
@@ -157,12 +153,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.primary,
+                          color: Theme.of(context).colorScheme.secondaryVariant,
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.primary,
+                          color: Theme.of(context).colorScheme.secondaryVariant,
                           width: 1.7,
                         ),
                       ),
@@ -175,7 +171,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       labelText: 'Birthday',
                       labelStyle: Theme.of(context).textTheme.bodyText1,
                       hintText: 'Write your birthday',
-                      helperText: 'This information must be real, because it will be confirmed'
                   ),
                 ),
                 const SizedBox(
@@ -188,12 +183,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.primary,
+                          color: Theme.of(context).colorScheme.secondaryVariant,
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.primary,
+                          color: Theme.of(context).colorScheme.secondaryVariant,
                           width: 1.7,
                         ),
                       ),
@@ -206,7 +201,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       labelText: 'Phone Number',
                       labelStyle: Theme.of(context).textTheme.bodyText1,
                       hintText: 'Write your phone number',
-                      helperText: 'This information must be real, because it will be confirmed'
                   ),
                 ),
                 const SizedBox(
@@ -219,12 +213,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Theme.of(context).colorScheme.primary,
+                        color: Theme.of(context).colorScheme.secondaryVariant,
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Theme.of(context).colorScheme.primary,
+                        color: Theme.of(context).colorScheme.secondaryVariant,
                         width: 1.7,
                       ),
                     ),
@@ -237,7 +231,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     labelText: 'Email',
                     labelStyle: Theme.of(context).textTheme.bodyText1,
                     hintText: 'Write your email',
-                    helperText: 'This information must be real, because it will be confirmed'
                   ),
                 ),
                 const SizedBox(
@@ -253,7 +246,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     elevation: 1,
                     primary: Theme.of(context).colorScheme.primary,
                     minimumSize: const Size.fromHeight(50),
-                    //padding: const EdgeInsets.all(20),
                   ),
                 ),
                 const SizedBox(
@@ -269,24 +261,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     elevation: 1,
                     primary: Theme.of(context).colorScheme.primary,
                     minimumSize: const Size.fromHeight(50),
-                    //padding: const EdgeInsets.all(20),
                   ),
                 ),
               ],
             ),
           )
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-          child: Icon(QardWalletApp.themeNotifier.value == ThemeMode.light
-              ? Icons.dark_mode
-              : Icons.light_mode),
-          onPressed: () {
-            QardWalletApp.themeNotifier.value =
-            QardWalletApp.themeNotifier.value == ThemeMode.light
-                ? ThemeMode.dark
-                : ThemeMode.light;
-          }
       ),
     );
   }

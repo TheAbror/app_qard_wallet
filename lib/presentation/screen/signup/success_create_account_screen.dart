@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SuccessCreateAccountScreen extends StatefulWidget {
-  static const routeName = "/signout/success";
+  static const routeName = "/signup/success";
 
   const SuccessCreateAccountScreen({Key? key}) : super(key: key);
 

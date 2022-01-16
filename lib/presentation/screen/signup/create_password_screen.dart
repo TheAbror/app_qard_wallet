@@ -64,12 +64,12 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Theme.of(context).colorScheme.primary,
+                            color: Theme.of(context).colorScheme.secondaryVariant,
                           ),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Theme.of(context).colorScheme.primary,
+                            color: Theme.of(context).colorScheme.secondaryVariant,
                             width: 1.7,
                           ),
                         ),
@@ -82,7 +82,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                         labelText: 'Password',
                         labelStyle: Theme.of(context).textTheme.bodyText1,
                         hintText: 'Write your password',
-                        helperText: 'Make sure to use number, symbols and capital letters'
+                        //helperText: 'Make sure to use number, symbols and capital letters'
                     ),
                   ),
                   const SizedBox(
@@ -95,12 +95,12 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Theme.of(context).colorScheme.primary,
+                            color: Theme.of(context).colorScheme.secondaryVariant,
                           ),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Theme.of(context).colorScheme.primary,
+                            color: Theme.of(context).colorScheme.secondaryVariant,
                             width: 1.7,
                           ),
                         ),
@@ -113,7 +113,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                         labelText: 'Confirm Password',
                         labelStyle: Theme.of(context).textTheme.bodyText1,
                         hintText: 'Repeat your password',
-                        helperText: 'Password must match'
+                        //helperText: 'Password must match'
                     ),
                   ),
                   const SizedBox(
@@ -129,7 +129,6 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                       elevation: 1,
                       primary: Theme.of(context).colorScheme.primary,
                       minimumSize: const Size.fromHeight(50),
-                      //padding: const EdgeInsets.all(20),
                     ),
                   ),
                   const SizedBox(
@@ -145,24 +144,12 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                       elevation: 1,
                       primary: Theme.of(context).colorScheme.primary,
                       minimumSize: const Size.fromHeight(50),
-                      //padding: const EdgeInsets.all(20),
                     ),
                   ),
                 ],
               ),
             )
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-          child: Icon(QardWalletApp.themeNotifier.value == ThemeMode.light
-              ? Icons.dark_mode
-              : Icons.light_mode),
-          onPressed: () {
-            QardWalletApp.themeNotifier.value =
-            QardWalletApp.themeNotifier.value == ThemeMode.light
-                ? ThemeMode.dark
-                : ThemeMode.light;
-          }
       ),
     );
   }

@@ -52,7 +52,8 @@ class QardWalletApp extends StatelessWidget {
               colorScheme: const ColorScheme.light(
                 primary: Color(0xff00D0C4),
                 primaryVariant: Colors.white,
-                secondary: Colors.amberAccent,
+                secondary: Color(0xff00D0C4),
+                secondaryVariant: Colors.black,
                 background: Color(0xfff2f2f2),
                 brightness: Brightness.light,
               ),
@@ -74,6 +75,7 @@ class QardWalletApp extends StatelessWidget {
                 primary: Color(0xff181818),
                 primaryVariant: Color(0xff202020),
                 secondary: Color(0xff00D0C4),
+                secondaryVariant: Colors.white,
                 background: Colors.black,
                 brightness: Brightness.dark,
               ),

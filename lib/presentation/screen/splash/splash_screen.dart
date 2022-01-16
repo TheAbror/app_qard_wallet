@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qard_wallet/domain/enums/init_type.dart';
 import 'package:qard_wallet/presentation/bloc/splash_bloc.dart';
+import 'package:qard_wallet/presentation/screen/signin/signin_screen.dart';
 import 'package:qard_wallet/presentation/screen/splash/select_action_screen.dart';
 
 
@@ -21,18 +22,19 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void _goToHome() {
 
-    InitType result = InitType.intro;
+    InitType result = InitType.register;
 
     if (result ==  InitType.intro) {
-      Navigator.pushNamed(context, SelectActionScreen.routeName);
 
     }
 
     if (result ==  InitType.login) {
+      Navigator.pushNamed(context, SignInScreen.routeName);
 
     }
 
     if (result ==  InitType.register) {
+      Navigator.pushNamed(context, SelectActionScreen.routeName);
 
     }
 
@@ -56,7 +58,6 @@ class _SplashScreenState extends State<SplashScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/images/logo.png'),
-                  const Text('Cargando...'),
                 ],
               )
           ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:qard_wallet/main.dart';
 import 'package:qard_wallet/presentation/commons/link.dart';
-import 'package:qard_wallet/presentation/screen/home/home_screen.dart';
+import 'package:qard_wallet/presentation/screen/signup/success_create_account_screen.dart';
 
 class TermsAndConditionsScreen extends StatefulWidget {
   static const routeName = "/signup/terms_and_conditions";
@@ -88,7 +87,7 @@ class _TermsAndConditionsScreenState extends State<TermsAndConditionsScreen> {
                 height: 26,
               ),
               ElevatedButton(
-                onPressed: () => Navigator.pushNamed(context, HomeScreen.routeName),
+                onPressed: () => Navigator.pushNamed(context, SuccessCreateAccountScreen.routeName),
                 child: Text(
                   'Agree And Continue',
                   style: Theme.of(context).textTheme.headline2,
@@ -107,17 +106,6 @@ class _TermsAndConditionsScreenState extends State<TermsAndConditionsScreen> {
             ],
           ),
         )
-      ),
-      floatingActionButton: FloatingActionButton(
-          child: Icon(QardWalletApp.themeNotifier.value == ThemeMode.light
-              ? Icons.dark_mode
-              : Icons.light_mode),
-          onPressed: () {
-            QardWalletApp.themeNotifier.value =
-            QardWalletApp.themeNotifier.value == ThemeMode.light
-                ? ThemeMode.dark
-                : ThemeMode.light;
-          }
       ),
     );
   }

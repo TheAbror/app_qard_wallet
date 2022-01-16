@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:qard_wallet/main.dart';
 import 'package:qard_wallet/presentation/screen/signup/create_password_screen.dart';
 import 'package:qard_wallet/presentation/screen/signup/modify_signup_screen.dart';
 
@@ -79,12 +78,12 @@ class _ConfirmateSignUpScreenState extends State<ConfirmateSignUpScreen> {
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Theme.of(context).colorScheme.primary,
+                              color: Theme.of(context).colorScheme.secondaryVariant,
                             ),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Theme.of(context).colorScheme.primary,
+                              color: Theme.of(context).colorScheme.secondaryVariant,
                               width: 1.7,
                             ),
                           ),
@@ -136,12 +135,12 @@ class _ConfirmateSignUpScreenState extends State<ConfirmateSignUpScreen> {
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Theme.of(context).colorScheme.primary,
+                              color: Theme.of(context).colorScheme.secondaryVariant,
                             ),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Theme.of(context).colorScheme.primary,
+                              color: Theme.of(context).colorScheme.secondaryVariant,
                               width: 1.7,
                             ),
                           ),
@@ -218,17 +217,6 @@ class _ConfirmateSignUpScreenState extends State<ConfirmateSignUpScreen> {
               ),
             )
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-          child: Icon(QardWalletApp.themeNotifier.value == ThemeMode.light
-              ? Icons.dark_mode
-              : Icons.light_mode),
-          onPressed: () {
-            QardWalletApp.themeNotifier.value =
-            QardWalletApp.themeNotifier.value == ThemeMode.light
-                ? ThemeMode.dark
-                : ThemeMode.light;
-          }
       ),
     );
   }

@@ -70,7 +70,7 @@ class _SelectActionScreenState extends State<SelectActionScreen> {
               const SizedBox(
                 height: 320,
               ),
-              Image.asset('assets/images/logo.png',height: 150,),
+              Image.asset('assets/images/logo.png', height: 150,),
             ],
           ),
         ),
