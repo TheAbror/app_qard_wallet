@@ -22,15 +22,14 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void _goToHome() {
 
-    InitType result = InitType.login;
+    InitType result = InitType.register;
 
     if (result ==  InitType.intro) {
 
     }
 
     if (result ==  InitType.login) {
-       ;
-
+      Navigator.pushNamed(context, SignInScreen.routeName);
     }
 
     if (result ==  InitType.register) {
