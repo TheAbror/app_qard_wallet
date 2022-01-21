@@ -43,15 +43,20 @@ dependencies:
   crypto: ^3.0.1
   uuid: ^3.0.5
   platform: ^3.1.0
+  introduction_screen: ^2.1.0
+  fl_chart: ^0.41.0
+  sse: ^4.1.0
+
+  #plugin nativos
+  local_auth: ^1.1.9
+  path_provider: ^2.0.8
   sqflite: ^2.0.1
   url_launcher: ^6.0.18
-  introduction_screen: ^2.1.0
-  contacts_service: ^0.6.3
-  local_auth: ^1.1.9
-  fl_chart: ^0.41.0
-  share: ^2.0.4
-  sse: ^4.1.0
-  path_provider: ^2.0.8
+
+  #se requiere IOS 9.0
+  #contacts_service: ^0.6.3
+  #share: ^2.0.4
+
 
 dev_dependencies:
   flutter_test:
