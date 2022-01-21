@@ -30,7 +30,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
     if (result ==  InitType.login) {
       Navigator.pushNamed(context, SignInScreen.routeName);
-
     }
 
     if (result ==  InitType.register) {
