@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:qard_wallet/main.dart';
-import 'package:qard_wallet/presentation/screen/forgot/authorization_screen.dart';
+import 'package:qard_wallet/presentation/screen/auth/forgot/authorization_screen.dart';
 import 'package:qard_wallet/presentation/screen/home/home_screen.dart';
 
 class SignInScreen extends StatefulWidget {

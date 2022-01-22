@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qard_wallet/main.dart';
-import 'package:qard_wallet/presentation/screen/signup/terms_and_conditions_screen.dart';
+import 'package:qard_wallet/presentation/screen/auth/signup/terms_and_conditions_screen.dart';
 
 class CreatePasswordScreen extends StatefulWidget {
   static const routeName = "/signup/password";

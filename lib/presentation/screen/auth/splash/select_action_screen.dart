@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:qard_wallet/main.dart';
-import 'package:qard_wallet/presentation/screen/recover/recover_account_screen.dart';
-import 'package:qard_wallet/presentation/screen/signup/signup_screen.dart';
+import 'package:qard_wallet/presentation/screen/auth/recover/recover_account_screen.dart';
+import 'package:qard_wallet/presentation/screen/auth/signup/signup_screen.dart';
 
 class SelectActionScreen extends StatefulWidget {
   static const routeName = "/action";

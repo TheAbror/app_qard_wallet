@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qard_wallet/presentation/screen/signup/confirmate_signup_screen.dart';
+import 'package:qard_wallet/presentation/screen/auth/signup/confirmate_signup_screen.dart';
 
 class ModifySignUpScreen extends StatefulWidget {
   static const routeName = "/signup/modify";

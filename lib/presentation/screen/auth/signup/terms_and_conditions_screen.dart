@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qard_wallet/presentation/commons/link.dart';
-import 'package:qard_wallet/presentation/screen/signup/success_create_account_screen.dart';
+import 'package:qard_wallet/presentation/screen/auth/signup/success_create_account_screen.dart';
 
 class TermsAndConditionsScreen extends StatefulWidget {
   static const routeName = "/signup/terms_and_conditions";
