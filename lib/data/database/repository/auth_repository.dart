@@ -1,38 +1,38 @@
 
 import 'package:qard_wallet/data/database/configuration/sql.dart';
-import 'package:rxdart/rxdart.dart';
+import 'package:qard_wallet/domain/model/auth/user.dart';
 
 abstract class IAuthRepository {
   Stream<void> ping();
-  Stream<void> siginWithEmail();
-  Stream<void> siginWithPhoneNumber();
-  Stream<void> confirmate();
-  Stream<void> confirmateWithBiometry();
+  Stream<User> signInWithEmail();
+  Stream<User> signInWithPhoneNumber();
+  Stream<void> confirmation();
+  Stream<void> confirmationWithBiometry();
   Stream<void> createCodeForEmail();
   Stream<void> createCodeForPhoneNumber();
-  Stream<void> signup();
+  Stream<User> signup();
   Stream<void> updateSignup();
   Stream<void> createOrUpdatePassword();
-  Stream<void> aceptTermsAndConditions();
-  Stream<void> signout();
+  Stream<void> acceptTermsAndConditions();
+  Stream<void> signOut();
 }
 
 class AuthRepository extends Sql implements IAuthRepository {
 
   @override
-  Stream<void> aceptTermsAndConditions() {
+  Stream<void> acceptTermsAndConditions() {
     // TODO: implement aceptTermsAndConditions
     throw UnimplementedError();
   }
 
   @override
-  Stream<void> confirmate() {
+  Stream<void> confirmation() {
     // TODO: implement confirmate
     throw UnimplementedError();
   }
 
   @override
-  Stream<void> confirmateWithBiometry() {
+  Stream<void> confirmationWithBiometry() {
     // TODO: implement confirmateWithBiometry
     throw UnimplementedError();
   }
@@ -62,25 +62,25 @@ class AuthRepository extends Sql implements IAuthRepository {
   }
 
   @override
-  Stream<void> siginWithEmail() {
+  Stream<User> signInWithEmail() {
     // TODO: implement siginWithEmail
     throw UnimplementedError();
   }
 
   @override
-  Stream<void> siginWithPhoneNumber() {
+  Stream<User> signInWithPhoneNumber() {
     // TODO: implement siginWithPhoneNumber
     throw UnimplementedError();
   }
 
   @override
-  Stream<void> signout() {
+  Stream<void> signOut() {
     // TODO: implement signout
     throw UnimplementedError();
   }
 
   @override
-  Stream<void> signup() {
+  Stream<User> signup() {
     // TODO: implement signup
     throw UnimplementedError();
   }
