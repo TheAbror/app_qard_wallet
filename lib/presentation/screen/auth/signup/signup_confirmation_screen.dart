@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:qard_wallet/presentation/screen/auth/signup/create_password_screen.dart';
-import 'package:qard_wallet/presentation/screen/auth/signup/modify_signup_screen.dart';
+import 'package:qard_wallet/presentation/screen/auth/signup/password_creation_screen.dart';
+import 'package:qard_wallet/presentation/screen/auth/signup/signup_modification_screen.dart';
 
-class ConfirmateSignUpScreen extends StatefulWidget {
-  static const routeName = "/signup/confirmate";
+class SignUpConfirmationScreen extends StatefulWidget {
+  static const routeName = "/signup/confirmation";
 
-  const ConfirmateSignUpScreen({Key? key}) : super(key: key);
+  const SignUpConfirmationScreen({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _ConfirmateSignUpScreenState();
+    return _SignUpConfirmationScreenState();
   }
 }
 
-class _ConfirmateSignUpScreenState extends State<ConfirmateSignUpScreen> {
+class _SignUpConfirmationScreenState extends State<SignUpConfirmationScreen> {
 
   late GlobalKey<FormState> _formKey;
 
@@ -42,8 +42,7 @@ class _ConfirmateSignUpScreenState extends State<ConfirmateSignUpScreen> {
         child: Container(
             padding: const EdgeInsets.only(left: 20, right: 20),
             width: MediaQuery.of(context).size.width,
-            height: 843,
-            color: Theme.of(context).colorScheme.primaryVariant,
+            height: 860,
             child: Form(
               key: _formKey,
               child: Column(
@@ -187,7 +186,7 @@ class _ConfirmateSignUpScreenState extends State<ConfirmateSignUpScreen> {
                     height: 30,
                   ),
                   ElevatedButton(
-                    onPressed: () => Navigator.pushNamed(context, ModifySignUpScreen.routeName),
+                    onPressed: () => Navigator.pushNamed(context, SignUpModificationScreen.routeName),
                     child: Text(
                       'Modify',
                       style: Theme.of(context).textTheme.headline2,

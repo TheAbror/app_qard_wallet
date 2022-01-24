@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qard_wallet/presentation/commons/link.dart';
-import 'package:qard_wallet/presentation/screen/auth/signup/success_create_account_screen.dart';
+import 'package:qard_wallet/presentation/screen/auth/signup/success_account_creation_screen.dart';
 
 class TermsAndConditionsScreen extends StatefulWidget {
   static const routeName = "/signup/terms_and_conditions";
@@ -23,8 +23,7 @@ class _TermsAndConditionsScreenState extends State<TermsAndConditionsScreen> {
         child: Container(
           padding: const EdgeInsets.only(left: 20, right: 20),
           width: MediaQuery.of(context).size.width,
-          height: 843,
-          color: Theme.of(context).colorScheme.primaryVariant,
+          height: 860,
           child: Column(
             children: [
               const SizedBox(
@@ -35,11 +34,11 @@ class _TermsAndConditionsScreenState extends State<TermsAndConditionsScreen> {
                 style: Theme.of(context).textTheme.headline1,
               ),
               const SizedBox(
-                height: 40,
+                height: 60,
               ),
               Image.asset('assets/images/terms-and-conditions.png'),
               const SizedBox(
-                height: 40,
+                height: 120,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -99,10 +98,6 @@ class _TermsAndConditionsScreenState extends State<TermsAndConditionsScreen> {
                   //padding: const EdgeInsets.all(20),
                 ),
               ),
-              const SizedBox(
-                height: 33,
-              ),
-              Image.asset('assets/images/logo.png',height: 150,),
             ],
           ),
         )

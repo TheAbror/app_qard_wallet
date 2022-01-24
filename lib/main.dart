@@ -8,12 +8,12 @@ import 'presentation/screen/auth/forgot/succsess_forgot_password_screen.dart';
 import 'presentation/screen/auth/recover/recover_account_screen.dart';
 import 'presentation/screen/auth/signin/signin_screen.dart';
 import 'presentation/screen/auth/signin/twofa_authorization_screen.dart';
-import 'presentation/screen/auth/signup/confirmate_signup_screen.dart';
-import 'presentation/screen/auth/signup/create_password_screen.dart';
-import 'presentation/screen/auth/signup/modify_signup_screen.dart';
+import 'presentation/screen/auth/signup/signup_confirmation_screen.dart';
+import 'presentation/screen/auth/signup/password_creation_screen.dart';
+import 'presentation/screen/auth/signup/signup_modification_screen.dart';
 import 'presentation/screen/auth/signup/signup_screen.dart';
-import 'presentation/screen/auth/signup/success_create_account_screen.dart';
-import 'presentation/screen/auth/signup/terms_and_conditions_screen.dart';
+import 'presentation/screen/auth/signup/success_account_creation_screen.dart';
+import 'presentation/screen/auth/signup/terms_accepting_screen.dart';
 import 'presentation/screen/auth/splash/select_action_screen.dart';
 import 'presentation/screen/auth/splash/splash_screen.dart';
 import 'presentation/screen/home/home_screen.dart';
@@ -53,16 +53,16 @@ class QardWalletApp extends StatelessWidget {
               ),
               colorScheme: const ColorScheme.light(
                 primary: Color(0xff00D0C4),
-                primaryVariant: Colors.white,
+                primaryVariant: Color(0xfff2f2f2),
                 secondary: Color(0xff00D0C4),
                 secondaryVariant: Colors.black,
-                background: Color(0xfff2f2f2),
+                background: Colors.white,
                 brightness: Brightness.light,
               ),
               textTheme: const TextTheme(
-                  headline1: TextStyle(color: Color(0xff353741),
+                  headline1: TextStyle(color: Colors.black,
                     fontSize: 36, fontFamily: 'GothamRounded', ),
-                  headline2: TextStyle(color: Color(0xff353741),
+                  headline2: TextStyle(color: Colors.black,
                       fontSize: 25, fontFamily: 'GothamRounded'),
                   bodyText1: TextStyle(fontSize: 15,
                       fontWeight: FontWeight.bold ),
@@ -98,8 +98,8 @@ class QardWalletApp extends StatelessWidget {
               SelectActionScreen.routeName: (context) => const SelectActionScreen(),
               //signup
               SignUpScreen.routeName: (context) => const SignUpScreen(),
-              ConfirmateSignUpScreen.routeName: (context) => const ConfirmateSignUpScreen(),
-              ModifySignUpScreen.routeName: (context) => const ModifySignUpScreen(),
+              SignUpConfirmationScreen.routeName: (context) => const SignUpConfirmationScreen(),
+              SignUpModificationScreen.routeName: (context) => const SignUpModificationScreen(),
               CreatePasswordScreen.routeName: (context) => const CreatePasswordScreen(),
               TermsAndConditionsScreen.routeName: (context) => const TermsAndConditionsScreen(),
               SuccessCreateAccountScreen.routeName: (context) => const SuccessCreateAccountScreen(),

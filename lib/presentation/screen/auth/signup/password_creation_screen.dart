@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qard_wallet/presentation/screen/auth/signup/terms_and_conditions_screen.dart';
+import 'package:qard_wallet/presentation/screen/auth/signup/terms_accepting_screen.dart';
 
 class CreatePasswordScreen extends StatefulWidget {
   static const routeName = "/signup/password";
@@ -41,8 +41,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
         child: Container(
             padding: const EdgeInsets.only(left: 20, right: 20),
             width: MediaQuery.of(context).size.width,
-            height: 843,
-            color: Theme.of(context).colorScheme.primaryVariant,
+            height: 860,
             child: Form(
               key: _formKey,
               child: Column(

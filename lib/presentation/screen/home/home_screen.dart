@@ -39,17 +39,17 @@ class _HomeScreenState extends State<HomeScreen> {
           decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.primaryVariant,
             borderRadius: const BorderRadius.all(Radius.circular(5)),
-            boxShadow: const [
-              BoxShadow(
-                color: Color.fromARGB(50, 0, 0, 0),
-                blurRadius: 3,   // soften the shadow
-                spreadRadius: 0, //extend the shadow
-                offset: Offset(
-                  -0.1, // Move to right 10  horizontally
-                  0,    // Move to bottom 10 Vertically
-                ),
-              )
-            ],
+            // boxShadow: const [
+            //   BoxShadow(
+            //     color: Color.fromARGB(50, 0, 0, 0),
+            //     blurRadius: 3,   // soften the shadow
+            //     spreadRadius: 0, //extend the shadow
+            //     offset: Offset(
+            //       -0.1, // Move to right 10  horizontally
+            //       0,    // Move to bottom 10 Vertically
+            //     ),
+            //   )
+            // ],
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qard_wallet/presentation/screen/auth/signup/confirmate_signup_screen.dart';
+import 'package:qard_wallet/presentation/screen/auth/signup/signup_confirmation_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   static const routeName = "/signup";
@@ -41,8 +41,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         child: Container(
           padding: const EdgeInsets.only(left: 20, right: 20),
           width: MediaQuery.of(context).size.width,
-          height: 1000,
-          color: Theme.of(context).colorScheme.primaryVariant,
+          height: 860,
           child: Form(
             key: _formKey,
             child: Column(
@@ -237,7 +236,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: 30,
                 ),
                 ElevatedButton(
-                  onPressed: () => Navigator.pushNamed(context, ConfirmateSignUpScreen.routeName),
+                  onPressed: () => Navigator.pushNamed(context, SignUpConfirmationScreen.routeName),
                   child: Text(
                     'Save',
                     style: Theme.of(context).textTheme.headline2,
