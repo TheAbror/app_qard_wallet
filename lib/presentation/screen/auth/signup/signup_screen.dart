@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qard_wallet/presentation/bloc/auth_bloc.dart';
 import 'package:qard_wallet/presentation/screen/auth/signup/signup_confirmation_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -15,7 +16,12 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
 
   late GlobalKey<FormState> _formKey;
+  late AuthBloc _bloc;
 
+  late String? _firstName;
+  late String? _lastName;
+  late String? _alias;
+  late DateTime? _birthday;
   late String? _phoneNumber;
   late String? _email;
 
@@ -25,12 +31,24 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   void _onSave() {
 
+    // final Signup signup = Signup(
+    //     _firstName!,
+    //     _lastName!,
+    //     _alias!,
+    //     _birthday!,
+    //     _email!,
+    //     _phoneNumber!);
+
+    //_bloc.signup(signup);
+
+    Navigator.pushNamed(context, SignUpConfirmationScreen.routeName);
   }
 
   @override
   void initState() {
     super.initState();
     _formKey = GlobalKey<FormState>();
+    _bloc = AuthBloc();
   }
 
   @override
@@ -58,7 +76,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 TextFormField(
                   obscureText: false,
                   validator: _onValidate,
-                  onSaved: (value) => _phoneNumber = value,
+                  onSaved: (value) => _firstName = value,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -88,7 +106,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 TextFormField(
                   obscureText: false,
                   validator: _onValidate,
-                  onSaved: (value) => _phoneNumber = value,
+                  onSaved: (value) => _lastName = value,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderSide: BorderSide(
@@ -118,7 +136,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 TextFormField(
                   obscureText: false,
                   validator: _onValidate,
-                  onSaved: (value) => _phoneNumber = value,
+                  onSaved: (value) => _alias = value,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderSide: BorderSide(
@@ -148,7 +166,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 TextFormField(
                   obscureText: false,
                   validator: _onValidate,
-                  onSaved: (value) => _phoneNumber = value,
+                  onSaved: (value) => _birthday = DateTime.now(),
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderSide: BorderSide(
@@ -208,7 +226,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 TextFormField(
                   obscureText: false,
                   validator: _onValidate,
-                  onSaved: (value) => _phoneNumber = value,
+                  onSaved: (value) => _email = value,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -236,7 +254,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: 30,
                 ),
                 ElevatedButton(
-                  onPressed: () => Navigator.pushNamed(context, SignUpConfirmationScreen.routeName),
+                  onPressed: _onSave,
                   child: Text(
                     'Save',
                     style: Theme.of(context).textTheme.headline2,

@@ -4,6 +4,7 @@ import 'package:qard_wallet/data/webservice/restclient/auth_restclient.dart';
 import 'package:qard_wallet/domain/caseuse/caseuse.dart';
 import 'package:qard_wallet/domain/model/auth/confirmation.dart';
 import 'package:qard_wallet/domain/model/auth/user.dart';
+import 'package:rxdart/rxdart.dart';
 
 class SignUpConfirmationCaseUse implements ICaseUse<Confirmation, User>  {
 
@@ -16,9 +17,9 @@ class SignUpConfirmationCaseUse implements ICaseUse<Confirmation, User>  {
   }
 
   @override
-  Stream<User> execute(Confirmation param) {
-    // TODO: implement execute
-    throw UnimplementedError();
+  Stream<User> execute(Confirmation confirmation) {
+    return _restClient.confirmation(confirmation)
+        .flatMap((event) => _repository.confirmation(event));
   }
 
 }

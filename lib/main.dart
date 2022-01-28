@@ -8,8 +8,8 @@ import 'presentation/screen/auth/forgot/succsess_forgot_password_screen.dart';
 import 'presentation/screen/auth/recover/recover_account_screen.dart';
 import 'presentation/screen/auth/signin/signin_screen.dart';
 import 'presentation/screen/auth/signin/twofa_authorization_screen.dart';
-import 'presentation/screen/auth/signup/signup_confirmation_screen.dart';
 import 'presentation/screen/auth/signup/password_creation_screen.dart';
+import 'presentation/screen/auth/signup/signup_confirmation_screen.dart';
 import 'presentation/screen/auth/signup/signup_modification_screen.dart';
 import 'presentation/screen/auth/signup/signup_screen.dart';
 import 'presentation/screen/auth/signup/success_account_creation_screen.dart';
@@ -52,9 +52,9 @@ class QardWalletApp extends StatelessWidget {
                   elevation: 1.5
               ),
               colorScheme: const ColorScheme.light(
-                primary: Color(0xff00D0C4),
+                primary: Color(0xff03DDF0),
                 primaryVariant: Color(0xfff2f2f2),
-                secondary: Color(0xff00D0C4),
+                secondary: Color(0xff03DDF0),
                 secondaryVariant: Colors.black,
                 background: Colors.white,
                 brightness: Brightness.light,
@@ -78,7 +78,8 @@ class QardWalletApp extends StatelessWidget {
                 primaryVariant: Color(0xff202020),
                 secondary: Color(0xff00D0C4),
                 secondaryVariant: Colors.white,
-                background: Colors.black,
+                background: Color(0xff202020),
+                //background: Colors.black,
                 brightness: Brightness.dark,
               ),
               textTheme: const TextTheme(

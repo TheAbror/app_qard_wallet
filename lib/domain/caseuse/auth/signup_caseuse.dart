@@ -4,6 +4,7 @@ import 'package:qard_wallet/data/webservice/restclient/auth_restclient.dart';
 import 'package:qard_wallet/domain/caseuse/caseuse.dart';
 import 'package:qard_wallet/domain/model/auth/signup.dart';
 import 'package:qard_wallet/domain/model/auth/user.dart';
+import 'package:rxdart/rxdart.dart';
 
 class SignUpCaseUse implements ICaseUse<Signup, User> {
 
@@ -17,9 +18,8 @@ class SignUpCaseUse implements ICaseUse<Signup, User> {
 
   @override
   Stream<User> execute(Signup signup) {
-
-
-    return _restClient.signup(signup);
+    return _restClient.signup(signup)
+      .flatMap((event) => _repository.signup(event));
   }
 
 }

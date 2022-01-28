@@ -1,19 +1,15 @@
 
 import 'package:qard_wallet/data/database/configuration/sql.dart';
-import 'package:qard_wallet/domain/model/auth/confirmation.dart';
-import 'package:qard_wallet/domain/model/auth/password.dart';
-import 'package:qard_wallet/domain/model/auth/signup.dart';
 import 'package:qard_wallet/domain/model/auth/user.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:uuid/uuid.dart';
 
 abstract class IAuthRepository {
 
-  Stream<User> signup(Signup signup);
-  Stream<User> confirmation(Confirmation confirmation);
-  Stream<User> createOrUpdatePassword(Password password);
-  Stream<User> acceptTermsAndConditions(Uuid userID);
-  Stream<User> updateSignup(Signup signup);
+  Stream<User> signup(User signup);
+  Stream<User> confirmation(User confirmation);
+  Stream<User> createOrUpdatePassword(User password);
+  Stream<User> acceptTermsAndConditions(User userID);
+  Stream<User> updateSignup(User signup);
 
 
   Stream<void> ping();
@@ -28,10 +24,10 @@ abstract class IAuthRepository {
 class AuthRepository extends Sql implements IAuthRepository {
 
   @override
-  Stream<User> signup(Signup signup) {
+  Stream<User> signup(User signup) {
     return getConnection().flatMap((db) {
 
-      final Future<int> update = db.insert('User', signup.toMap());
+      final Future<int> update = db.insert('User', signup.toJson());
 
       return Stream.fromFuture(update).flatMap((id) {
 
@@ -48,11 +44,11 @@ class AuthRepository extends Sql implements IAuthRepository {
   }
 
   @override
-  Stream<User> confirmation(Confirmation confirmation) {
+  Stream<User> confirmation(User user) {
     return getConnection().flatMap((db) {
 
-      final Future<int> update = db.update('User', confirmation.toMap(),
-          where: 'userID = ?', whereArgs: [confirmation.id]);
+      final Future<int> update = db.update('User', user.toJson(),
+          where: 'userID = ?', whereArgs: [1]);
 
       return Stream.fromFuture(update).flatMap((id) {
 
@@ -69,11 +65,11 @@ class AuthRepository extends Sql implements IAuthRepository {
   }
 
   @override
-  Stream<User> createOrUpdatePassword(Password password) {
+  Stream<User> createOrUpdatePassword(User user) {
     return getConnection().flatMap((db) {
 
-      final Future<int> update = db.update('User', password.toMap(),
-          where: 'userID = ?', whereArgs: [password.id]);
+      final Future<int> update = db.update('User', user.toJson(),
+          where: 'userID = ?', whereArgs: [1]);
 
       return Stream.fromFuture(update).flatMap((id) {
 
@@ -90,7 +86,7 @@ class AuthRepository extends Sql implements IAuthRepository {
   }
 
   @override
-  Stream<User> acceptTermsAndConditions(Uuid userID) {
+  Stream<User> acceptTermsAndConditions(User userID) {
     return getConnection().flatMap((db) {
 
       final Future<int> update = db.update('User', {'isAcceptTerms':true},
@@ -111,11 +107,11 @@ class AuthRepository extends Sql implements IAuthRepository {
   }
 
   @override
-  Stream<User> updateSignup(Signup signup) {
+  Stream<User> updateSignup(User signup) {
     return getConnection().flatMap((db) {
 
-        final Future<int> update = db.update('User', signup.toMap(),
-          where: 'userID = ?', whereArgs: [signup.id]);
+        final Future<int> update = db.update('User', signup.toJson(),
+          where: 'userID = ?', whereArgs: [1]);
         
         return Stream.fromFuture(update).flatMap((id) {
 

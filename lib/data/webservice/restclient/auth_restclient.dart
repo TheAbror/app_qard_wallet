@@ -1,19 +1,18 @@
 
 import 'package:dio/dio.dart';
+import 'package:qard_wallet/data/webservice/configuration/http.dart';
 import 'package:qard_wallet/domain/model/auth/confirmation.dart';
 import 'package:qard_wallet/domain/model/auth/password.dart';
 import 'package:qard_wallet/domain/model/auth/signup.dart';
-import 'package:rxdart/rxdart.dart';
-import 'package:qard_wallet/data/webservice/configuration/http.dart';
 import 'package:qard_wallet/domain/model/auth/user.dart';
-import 'package:uuid/uuid.dart';
+import 'package:rxdart/rxdart.dart';
 
 abstract class IAuthRestClient {
 
   Stream<User> signup(Signup signup);
   Stream<User> confirmation(Confirmation confirmation);
   Stream<User> createOrUpdatePassword(Password password);
-  Stream<User> acceptTermsAndConditions(Uuid userID);
+  Stream<User> acceptTermsAndConditions(String userID);
   Stream<User> updateSignup(Signup signup);
 
 
@@ -63,7 +62,7 @@ class AuthRestClient extends Http implements IAuthRestClient {
   }
 
   @override
-  Stream<User> acceptTermsAndConditions(Uuid userID) {
+  Stream<User> acceptTermsAndConditions(String userID) {
     final Future<Response> future = getHttpClient()
         .put("/auth/signup/accept-terms");
 

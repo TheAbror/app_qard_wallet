@@ -9,7 +9,6 @@ import 'package:qard_wallet/domain/model/auth/password.dart';
 import 'package:qard_wallet/domain/model/auth/signup.dart';
 import 'package:qard_wallet/domain/model/auth/user.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:uuid/uuid.dart';
 
 class AuthBloc {
 
@@ -49,8 +48,8 @@ class AuthBloc {
     _subject.sink.addStream(stream);
   }
 
-  void acceptTermsAndConditions(Uuid userID) {
-    final ICaseUse<Uuid, User> caseUse =
+  void acceptTermsAndConditions(String userID) {
+    final ICaseUse<String, User> caseUse =
         TermsAcceptingCaseUse();
 
     final Stream<User> stream =

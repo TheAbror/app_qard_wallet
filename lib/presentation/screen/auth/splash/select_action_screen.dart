@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:qard_wallet/main.dart';
 import 'package:qard_wallet/presentation/screen/auth/recover/recover_account_screen.dart';
 import 'package:qard_wallet/presentation/screen/auth/signup/signup_screen.dart';
@@ -20,7 +19,7 @@ class _SelectActionScreenState extends State<SelectActionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.primaryVariant,
       body:  SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.only(left: 20, right: 20),
