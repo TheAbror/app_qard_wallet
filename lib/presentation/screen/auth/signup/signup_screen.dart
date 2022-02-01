@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:qard_wallet/domain/model/auth/signup.dart';
 import 'package:qard_wallet/presentation/bloc/auth_bloc.dart';
-import 'package:qard_wallet/presentation/screen/auth/signup/signup_confirmation_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   static const routeName = "/signup";
@@ -31,17 +31,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   void _onSave() {
 
-    // final Signup signup = Signup(
-    //     _firstName!,
-    //     _lastName!,
-    //     _alias!,
-    //     _birthday!,
-    //     _email!,
-    //     _phoneNumber!);
+    final Signup signup = Signup(
+        'Ana', 'Tapia', 'Malefica', '1993-08-14',
+        'atapia@qardgroup.com', '+584123345678');
 
-    //_bloc.signup(signup);
+    _bloc.signup(signup);
 
-    Navigator.pushNamed(context, SignUpConfirmationScreen.routeName);
+    //Navigator.pushNamed(context, SignUpConfirmationScreen.routeName);
   }
 
   @override

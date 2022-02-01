@@ -4,7 +4,7 @@ class Signup {
   String firstName;
   String lastName;
   String alias;
-  DateTime birthday;
+  String birthday;
   String email;
   String phoneNumber;
 
@@ -19,7 +19,7 @@ class Signup {
       : firstName = json['firstName'] as String,
         lastName = json['lastName'] as String,
         alias = json['alias'] as String,
-        birthday = DateTime.parse(json['birthday'] as String),
+        birthday = json['birthday'] as String,
         email = json['email'] as String,
         phoneNumber = json['phoneNumber'] as String;
 
@@ -27,7 +27,7 @@ class Signup {
     'firstName' : firstName,
     'lastName' : lastName,
     'alias' : alias,
-    'birthday' : birthday.toString(),
+    'birthday' : birthday,
     'email' : email,
     'phoneNumber' : phoneNumber,
   };

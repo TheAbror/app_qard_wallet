@@ -1,16 +1,22 @@
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:qard_wallet/data/webservice/restclient/auth_restclient.dart';
+import 'package:qard_wallet/domain/model/auth/signup.dart';
+import 'package:qard_wallet/domain/model/auth/user.dart';
 
 void main() {
 
-  test('String.split() splits the string on the delimiter', () {
-    var string = 'foo,bar,baz';
-    expect(string.split(','), equals(['foo', 'bar', 'baz']));
-  });
+  test('signup', () async {
+    final Signup signup = Signup(
+        'Ana', 'Tapia', 'Malefica', '1993-08-14',
+        'atapia@qardgroup.com', '+584123345678');
 
-  test('String.trim() removes surrounding whitespace', () {
-    var string = '  foo ';
-    expect(string.trim(), equals('foo'));
+    final IAuthRestClient restClient = AuthRestClient();
+
+    final User user = await restClient.signup(signup).first;
+
+    expect(user, equals(null));
+
   });
 
 }

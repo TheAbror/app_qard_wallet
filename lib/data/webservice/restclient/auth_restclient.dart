@@ -1,4 +1,6 @@
 
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:qard_wallet/data/webservice/configuration/http.dart';
 import 'package:qard_wallet/domain/model/auth/confirmation.dart';
@@ -17,7 +19,7 @@ abstract class IAuthRestClient {
 
 
 
-  Stream<void> ping();
+  Stream<User> ping();
   Stream<void> signInWithEmail();
   Stream<void> signInWithPhoneNumber();
   Stream<void> confirmationWithBiometry();
@@ -31,10 +33,15 @@ class AuthRestClient extends Http implements IAuthRestClient {
   @override
   Stream<User> signup(Signup signup) {
     final Future<Response> future = getHttpClient()
-        .post("/auth/signup");
+        .post("/auth/signup", data: signup.toJson(), options: Options(contentType: "application/json; charset=UTF-8"));
+
+    if (Http.DEBUG) {
+      print(jsonEncode(signup.toJson()));
+    }
 
     return Stream.fromFuture(future)
-        .doOnError((error, stacktrace) => print('Error en: /auth/signup => $error'))
+        .doOnError((error, stacktrace) => print("Error en: /auth/signup => $error"))
+        .doOnData((result) => print("Data en: /auth/signup => ${result.data}"))
         .map((result) => result.data)
         .map((result) => User.fromJson(result));
   }
@@ -44,8 +51,13 @@ class AuthRestClient extends Http implements IAuthRestClient {
     final Future<Response> future = getHttpClient()
         .put("/auth/confirmation");
 
+    if (Http.DEBUG) {
+      print(jsonEncode(confirmation.toJson()));
+    }
+
     return Stream.fromFuture(future)
         .doOnError((error, stacktrace) => print('Error en: /auth/confirmation => $error'))
+        .doOnData((data) => print("Data en: /auth/confirmation => $data"))
         .map((result) => result.data)
         .map((result) => User.fromJson(result));
   }
@@ -107,9 +119,15 @@ class AuthRestClient extends Http implements IAuthRestClient {
   }
 
   @override
-  Stream<void> ping() {
-    // TODO: implement ping
-    throw UnimplementedError();
+  Stream<User> ping() {
+    final Future<Response> future = getHttpClient()
+        .get('/auth/ping');
+
+    return Stream.fromFuture(future)
+        .doOnError((error, stacktrace) => print('Error en: /auth/ping => $error'))
+        .doOnData((error) => print('Data en: /auth/ping => $error'))
+        .map((result) => result.data['mensagger'])
+        .flatMap((event) => Stream.empty());
   }
 
   @override
